@@ -1,0 +1,29 @@
+{
+  "name": "getdevflow/bootstrap-business",
+  "description": "A multipurpose Bootstrap full website template ported from Start Bootstrap.",
+  "type": "devflow-theme",
+  "keywords": ["vapor","vapor-theme","theme","themes"],
+  "license": "GPL-2.0-only",
+  "authors": [
+    {
+      "name": "Joshua Parker",
+      "email": "joshua@joshuaparker.dev"
+    }
+  ],
+  "require": {
+    "php": ">=8.4",
+    "oomphinc/composer-installers-extender": "^2.0"
+  },
+  "extra": {
+    "installer-name": "BootstrapBusiness",
+    "installer-types": ["devflow-theme"]
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "oomphinc/composer-installers-extender": true
+    }
+  }
+}

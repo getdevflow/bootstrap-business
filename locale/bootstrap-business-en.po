@@ -1,0 +1,78 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bootstrap Business\n"
+"POT-Creation-Date: 2026-05-07 21:00-0600\n"
+"PO-Revision-Date: 2026-05-07 21:00-0600\n"
+"Last-Translator: Joshua Parker <joshua@joshuaparker.dev>\n"
+"Language-Team: Joshua Parker\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: bootstrap-business\n"
+"X-Generator: Poedit 3.9\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"t__;esc_html__;esc_attr__;trans;trans_html;trans_attr\n"
+"X-Poedit-SearchPath-0: blocks\n"
+"X-Poedit-SearchPath-1: layouts\n"
+"X-Poedit-SearchPath-2: .\n"
+"X-Poedit-SearchPathExcluded-0: locale\n"
+"X-Poedit-SearchPathExcluded-1: public\n"
+
+#: BootstrapBusinessTheme.php:28
+msgid "Bootstrap Business"
+msgstr ""
+
+#: BootstrapBusinessTheme.php:34
+msgid ""
+"A multipurpose Bootstrap full website template ported from Start Bootstrap."
+msgstr ""
+
+#: blocks/about-header/config.php:8 blocks/about-section/config.php:8
+#: blocks/bb-footer/config.php:9 blocks/bb-header/config.php:9
+#: blocks/bb-navbar/config.php:9 blocks/faq/config.php:8
+#: blocks/features/config.php:8 blocks/home-header/config.php:8
+#: blocks/rounded-img-about/config.php:9 blocks/rounded-img-home/config.php:9
+#: blocks/team-members/config.php:8 blocks/testimonial-img/config.php:9
+#: blocks/testimonial/config.php:8
+msgid "Theme"
+msgstr ""
+
+#: blocks/about-header/config.php:9
+msgid "About Header"
+msgstr ""
+
+#: blocks/about-section/config.php:9
+msgid "About Section"
+msgstr ""
+
+#: blocks/bb-footer/view.php:19
+msgid "Copyright"
+msgstr ""
+
+#: blocks/bb-footer/view.php:28
+msgid "Admin"
+msgstr ""
+
+#: blocks/faq/config.php:9
+msgid "FAQ"
+msgstr ""
+
+#: blocks/features/config.php:9
+msgid "Features"
+msgstr ""
+
+#: blocks/home-header/config.php:9
+msgid "Home Header"
+msgstr ""
+
+#: blocks/team-members/config.php:9
+msgid "Team Members"
+msgstr ""
+
+#: blocks/testimonial/config.php:9
+msgid "Testimonial"
+msgstr ""
