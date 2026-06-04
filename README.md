@@ -5,7 +5,7 @@ A multipurpose Bootstrap full website template ported from Start Bootstrap.
 
 > __Requires__ Devflow Version: 2.x
 
-> __Tested Up To:__ 2.x
+> __Tested Up To:__ 2.2.1
 
 > __Requires PHP:__ 8.4+
 
@@ -19,9 +19,9 @@ A multipurpose Bootstrap full website template ported from Start Bootstrap.
 ## Localization
 Portuguese, Chines (Simplified), German, English, Spanish, French, Italian Japanese, and Russian
 
-## Composer Installation
+## Codex Installation
 1. Start a new shell session.
-2. In the root of your install, run the following command ```composer require getdevflow/bootstrap-business```.
+2. In the root of your install, run the following command ```php codex theme:install getdevflow/bootstrap-business```.
 
 ## Changelog
 
