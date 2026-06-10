@@ -33,7 +33,7 @@ final class BootstrapBusinessTheme extends Theme
             'id' => 'bootstrap-business',
             'slug' => 'BootstrapBusiness',
             'author' => 'Joshua Parker',
-            'version' => '2.0.0',
+            'version' => '2.0.1',
             'description' => t__(
                 msgid: 'A multipurpose Bootstrap full website template ported from Start Bootstrap.',
                 domain: 'bootstrap-business'
