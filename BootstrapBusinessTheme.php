@@ -4,11 +4,15 @@ declare(strict_types=1);
 
 namespace Theme\BootstrapBusiness;
 
+use App\Application\Devflow;
 use App\Infrastructure\Services\Theme;
 use App\Shared\Services\Registry;
+use Qubus\EventDispatcher\ActionFilter\Action;
+use Qubus\EventDispatcher\ActionFilter\Filter;
 use Qubus\Exception\Exception;
 use ReflectionException;
 
+use function App\Shared\Helpers\compare_releases;
 use function App\Shared\Helpers\theme_root;
 use function App\Shared\Helpers\theme_url;
 use function basename;
@@ -29,7 +33,7 @@ final class BootstrapBusinessTheme extends Theme
             'id' => 'bootstrap-business',
             'slug' => 'BootstrapBusiness',
             'author' => 'Joshua Parker',
-            'version' => '1.0.0',
+            'version' => '2.0.0',
             'description' => t__(
                 msgid: 'A multipurpose Bootstrap full website template ported from Start Bootstrap.',
                 domain: 'bootstrap-business'
@@ -50,8 +54,32 @@ final class BootstrapBusinessTheme extends Theme
 
     /**
      * @inheritDoc
+     * @throws Exception
+     * @throws ReflectionException
      */
     public function handle(): void
     {
+        if (compare_releases(Devflow::release(), '2.3.0', '<')) {
+            $this->registerAdminNotice();
+            return;
+        }
+
+        Filter::getInstance()->addFilter('pagebuilder.support', fn() => true);
+    }
+
+    /**
+     * @return void
+     * @throws ReflectionException
+     */
+    private function registerAdminNotice(): void
+    {
+        Action::getInstance()->addAction('admin_notices', function () {
+            echo '<div class="alert dismissable alert-danger center sticky">' .
+                t__(
+                    'You must upgrade your system to at least v2.3 in order to use the new Bootstrap Business theme.',
+                    $this->id()
+                ) .
+            '</div>';
+        });
     }
 }
