@@ -9,7 +9,7 @@ A multipurpose Bootstrap full website template ported from Start Bootstrap.
 
 > __Requires PHP:__ 8.4+
 
-> __Stable Tag:__ 2.0.0
+> __Stable Tag:__ 2.0.1
 
 > __License:__ GPLv2-only
 
