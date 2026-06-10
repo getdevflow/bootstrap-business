@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bootstrap Business\n"
-"POT-Creation-Date: 2026-05-07 21:00-0600\n"
-"PO-Revision-Date: 2026-05-07 21:04-0600\n"
+"POT-Creation-Date: 2026-06-10 10:29-0600\n"
+"PO-Revision-Date: 2026-06-10 10:29-0600\n"
 "Last-Translator: \n"
 "Language-Team: Joshua Parker\n"
 "Language: it\n"
@@ -14,22 +14,35 @@ msgstr ""
 "X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: t__;esc_html__;esc_attr__;trans;trans_html;trans_attr\n"
+"X-Poedit-KeywordsList: "
+"t__;esc_html__;esc_attr__;trans;trans_html;trans_attr\n"
 "X-Poedit-SearchPath-0: blocks\n"
 "X-Poedit-SearchPath-1: layouts\n"
 "X-Poedit-SearchPath-2: .\n"
 "X-Poedit-SearchPathExcluded-0: locale\n"
 "X-Poedit-SearchPathExcluded-1: public\n"
 
-#: BootstrapBusinessTheme.php:28
+#: BootstrapBusinessTheme.php:32
 #, fuzzy
 msgid "Bootstrap Business"
 msgstr "Attività Bootstrap"
 
-#: BootstrapBusinessTheme.php:34
+#: BootstrapBusinessTheme.php:38
 #, fuzzy
-msgid "A multipurpose Bootstrap full website template ported from Start Bootstrap."
-msgstr "Un template multiuso per un sito web completo Bootstrap portato da Start Bootstrap."
+msgid ""
+"A multipurpose Bootstrap full website template ported from Start Bootstrap."
+msgstr ""
+"Un template multiuso per un sito web completo Bootstrap portato da Start "
+"Bootstrap."
+
+#: BootstrapBusinessTheme.php:79
+#, fuzzy
+msgid ""
+"You must upgrade your system to at least v2.3 in order to use the new "
+"Bootstrap Business theme."
+msgstr ""
+"Devi aggiornare il sistema almeno alla v2.3 per poter usare il nuovo tema "
+"Bootstrap Business."
 
 #: blocks/about-header/config.php:8 blocks/about-section/config.php:8
 #: blocks/bb-footer/config.php:9 blocks/bb-header/config.php:9
