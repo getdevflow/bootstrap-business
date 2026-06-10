@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bootstrap Business\n"
-"POT-Creation-Date: 2026-05-07 21:00-0600\n"
+"POT-Creation-Date: 2026-06-10 10:27-0600\n"
 "PO-Revision-Date: 2024-12-08 09:13-0800\n"
 "Last-Translator: \n"
 "Language-Team: Joshua Parker\n"
@@ -21,12 +21,16 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: locale\n"
 "X-Poedit-SearchPathExcluded-1: public\n"
 
-#: BootstrapBusinessTheme.php:28
+#: BootstrapBusinessTheme.php:32
 msgid "Bootstrap Business"
 msgstr ""
 
-#: BootstrapBusinessTheme.php:34
+#: BootstrapBusinessTheme.php:38
 msgid "A multipurpose Bootstrap full website template ported from Start Bootstrap."
+msgstr ""
+
+#: BootstrapBusinessTheme.php:79
+msgid "You must upgrade your system to at least v2.3 in order to use the new Bootstrap Business theme."
 msgstr ""
 
 #: blocks/about-header/config.php:8 blocks/about-section/config.php:8
