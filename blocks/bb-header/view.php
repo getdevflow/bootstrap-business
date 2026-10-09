@@ -3,6 +3,7 @@
 use App\Application\Devflow;
 
 use function App\Shared\Helpers\cms_head;
+
 ?>
 <!DOCTYPE html>
 <html lang="<?=Devflow::$PHP->configContainer->string(key: 'app.language');?>">

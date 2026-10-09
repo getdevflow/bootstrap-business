@@ -11,6 +11,8 @@ use Qubus\EventDispatcher\ActionFilter\Action;
 use Qubus\EventDispatcher\ActionFilter\Filter;
 use Qubus\Exception\Exception;
 use ReflectionException;
+use Vihzhuo\Contracts\ThemeContract;
+use Vihzhuo\Theme as BuilderTheme;
 
 use function App\Shared\Helpers\compare_releases;
 use function App\Shared\Helpers\theme_root;
@@ -20,7 +22,7 @@ use function dirname;
 use function get_class;
 use function Qubus\Security\Helpers\t__;
 
-final class BootstrapBusinessTheme extends Theme
+class BootstrapBusinessTheme extends Theme
 {
     /**
      * @inheritDoc
@@ -33,7 +35,7 @@ final class BootstrapBusinessTheme extends Theme
             'id' => 'bootstrap-business',
             'slug' => 'BootstrapBusiness',
             'author' => 'Joshua Parker',
-            'version' => '2.0.1',
+            'version' => '3.0.0',
             'description' => t__(
                 msgid: 'A multipurpose Bootstrap full website template ported from Start Bootstrap.',
                 domain: 'bootstrap-business'
@@ -65,6 +67,46 @@ final class BootstrapBusinessTheme extends Theme
         }
 
         Filter::getInstance()->addFilter('pagebuilder.support', fn() => true);
+        // These hooks are inert when Header Footer Builder is not installed/active.
+        Filter::getInstance()->addFilter(
+            'header.footer.slots',
+            [$this, 'headerFooterSlots'],
+            arguments: 2
+        );
+        Filter::getInstance()->addFilter(
+            'header.footer.canvas.assets',
+            [$this, 'headerFooterCanvasAssets'],
+            arguments: 2
+        );
+    }
+
+    public function headerFooterSlots(array $slots, ThemeContract $theme): array
+    {
+        return $this->supportsBuilderTheme($theme)
+        ? array_replace($slots, ['header' => ['bb-navbar'], 'footer' => ['bb-footer']])
+        : $slots;
+    }
+
+    public function headerFooterCanvasAssets(array $assets, ThemeContract $theme): array
+    {
+        if (!$this->supportsBuilderTheme($theme)) {
+            return $assets;
+        }
+
+        $assets['styles'] = array_merge($assets['styles'] ?? [], [
+            'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css',
+            'css/style.css',
+        ]);
+        $assets['scripts'] = array_merge($assets['scripts'] ?? [], [
+            'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js',
+        ]);
+        return $assets;
+    }
+
+    private function supportsBuilderTheme(ThemeContract $theme): bool
+    {
+        $folders = $theme instanceof BuilderTheme ? $theme->getThemeFolders() : [$theme->getFolder()];
+        return in_array(realpath(__DIR__), array_map('realpath', $folders), true);
     }
 
     /**
